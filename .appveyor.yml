@@ -13,4 +13,4 @@ install:
   - chmod +x ./driver/mac/chromedriver
 
 build_script:
-  - ./gradlew test -Dselenide.headless=true
+  - ./gradlew test --info
