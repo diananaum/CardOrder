@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class OrderTest {
@@ -13,7 +15,8 @@ public class OrderTest {
 
     @BeforeAll
     public static void setupAll() {
-        System.setProperty("webdriver.chrome.driver", "/Users/Dianaum/IdeaProjects/Zayavka/driver/mac/chromedriver");
+        WebDriverManager.chromedriver().setup();
+        //System.setProperty("webdriver.chrome.driver", "/Users/Dianaum/IdeaProjects/Zayavka/driver/mac/chromedriver");
     }
 
     @BeforeEach
