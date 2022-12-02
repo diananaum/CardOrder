@@ -10,6 +10,7 @@ build: off
 
 install:
   - java -jar ./artifacts/app-order.jar &
+  - chmod +x ./driver/mac/chromedriver
 
 build_script:
   - ./gradlew test -Dselenide.headless=true
